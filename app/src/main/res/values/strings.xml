@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BoardingLogress (First Project - Haura)</string>
+    <string name="skip">SKIP</string>
+    <string name="next">NEXT</string>
+    <string name="text_title">Text Title</string>
+    <string name="text_description">Text Description</string>
+</resources>
