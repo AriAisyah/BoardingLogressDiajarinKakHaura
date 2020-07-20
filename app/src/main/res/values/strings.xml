@@ -4,4 +4,11 @@
     <string name="next">NEXT</string>
     <string name="text_title">Text Title</string>
     <string name="text_description">Text Description</string>
+    <string name="welcome">Welcome to My Apps</string>
+    <string name="hint_pass_login">Enter Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have account?</string>
+    <string name="hint_email_login">Enter Email</string>
+    <string name="text_register">Register</string>
+    <string name="login">Login</string>
 </resources>

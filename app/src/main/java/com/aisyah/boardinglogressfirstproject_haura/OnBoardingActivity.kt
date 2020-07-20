@@ -36,7 +36,14 @@ class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
+
+        //panggil adapter nya di viewpager
         viewPager.adapter = introSliderAdapter
+
+        //naro indicator
+        setUpIndicators()
+
+        //naro indicator sesuai posisinya
         setCurrentIndicators(0)
 
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
@@ -49,9 +56,11 @@ class OnBoardingActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             if (viewPager.currentItem +1 < introSliderAdapter.itemCount){
                 viewPager.currentItem += 1
+                //kalo view pagernya masih kurang 3, dia lanjut view pager selanjutnya.
             } else {
                 Intent(applicationContext,MainActivity::class.java).also{
-                    startActivity(it)
+                    //
+                    startActivity(it) // "it" intent
                     finish()
                 }
             }
@@ -66,6 +75,7 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     private fun setUpIndicators() {
+        // indicator = nampung jumlah data
         val indicators = arrayOfNulls<ImageView>(introSliderAdapter.itemCount)
         val layoutParams = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -80,7 +90,7 @@ class OnBoardingActivity : AppCompatActivity() {
                     ContextCompat.getDrawable(
                         applicationContext,
                         R.drawable.indicator_inactive
-                    )
+                    ) // naro di drawable inactivenya
                 )
                 this?.layoutParams = layoutParams
             }
@@ -88,11 +98,14 @@ class OnBoardingActivity : AppCompatActivity() {
         }
     }
     private fun setCurrentIndicators(index : Int){
+        //childCount = buat ngitung widgetnya
         val childCount = dots.childCount
+        //dikasih current indicator biar ga bingung di viewpager yang mana
 
         for (i in 0 until childCount){
             val imageView = dots.get(i) as ImageView
 
+            //jika di posisi
             if (i == index){
                 imageView.setImageDrawable(ContextCompat.getDrawable(application, R.drawable.indicator_active))
             } else {
