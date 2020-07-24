@@ -6,35 +6,40 @@
     android:layout_gravity="center"
     android:layout_margin="@dimen/_20sdp"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
-
-    <ImageView
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_120sdp"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:src="@drawable/ic_android" />
+    tools:context=".RegisterActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_28sdp"
-        android:text="@string/welcome"
+        android:text="@string/welcome_register"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/et_email_login"
         android:layout_width="@dimen/_250sdp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_edit_text"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="@dimen/_10sdp"
+        android:hint="@string/hint_input_username"
+        android:inputType="textPassword"
+        android:padding="@dimen/_20sdp" />
+
+    <EditText
+        android:id="@+id/et_email_regis"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
         android:background="@drawable/bg_edit_text"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="@dimen/_10sdp"
-        android:hint="@string/hint_email_login"
+        android:hint="@string/hint_email_register"
         android:inputType="textEmailAddress"
         android:padding="@dimen/_20sdp" />
 
@@ -46,29 +51,30 @@
         android:background="@drawable/bg_edit_text"
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="@dimen/_10sdp"
-        android:hint="@string/hint_pass_login"
+        android:hint="@string/hint_pass_register"
         android:inputType="textPassword"
         android:padding="@dimen/_20sdp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="@dimen/_250sdp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/forgot_password"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15sp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_edit_text"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="@dimen/_10sdp"
+        android:hint="@string/hint_passverify_register"
+        android:inputType="textPassword"
+        android:padding="@dimen/_20sdp" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnRegister"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/bg_button"
-        android:text="@string/login"
-        android:layout_marginTop="@dimen/_10sdp"/>
+        android:text="@string/text_register" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,18 +86,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/dont_have_account"
+            android:text="@string/have_account"
             android:textColor="@color/colorBlack"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/itRegister"
+            android:id="@+id/itLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_register"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/login"
             android:textColor="@color/colorAccent"
-            android:textSize="15sp"
-            android:layout_marginStart="@dimen/_5sdp"/>
+            android:textSize="15sp" />
 
     </LinearLayout>
 

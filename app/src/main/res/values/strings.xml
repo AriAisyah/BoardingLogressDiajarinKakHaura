@@ -11,4 +11,11 @@
     <string name="hint_email_login">Enter Email</string>
     <string name="text_register">Register</string>
     <string name="login">Login</string>
+    <string name="have_account">Already have account?</string>
+    <string name="welcome_register">Register Account</string>
+    <string name="hint_input_username">Input Username</string>
+    <string name="hint_email_register">Input Email</string>
+    <string name="hint_pass_register">Input Password</string>
+    <string name="hint_passverify_register">Input Verify Password</string>
+    <string name="welcome_ss">Welcome to BoardingLogress App</string>
 </resources>
